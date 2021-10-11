@@ -1,0 +1,18 @@
+.homeBody {
+}
+.homeBody .controlPanel {
+  display: flex;
+  width: 400px;
+  height: 100px;
+}
+.homeBody .controlPanel .leftColumn {
+  width: 300px;
+  /* display: flex; */
+  margin: auto;
+}
+.homeBody .controlPanel .leftColumn .item1 {
+  margin: 5px;
+  text-align: center;
+  background-color: yellowgreen;
+  border: 1px solid white;
+}

@@ -1,0 +1,22 @@
+.invoiceFormBody {
+  width: 500px;
+  padding: 30px;
+  margin: 30px;
+  box-shadow: 0px 0px 5px 0px black;
+}
+.customerDetailsFormBody {
+  display: flex;
+  flex-direction: column;
+}
+.customerDetailsFormBody input {
+  margin: 7px;
+  border-radius: 2px;
+}
+.addItemForm {
+  margin-top: 40px;
+  background-color: rgb(224, 224, 224);
+}
+.addItemForm input {
+  margin: 7px;
+  border-radius: 2px;
+}
