@@ -15,16 +15,50 @@ function Home() {
     const handleRedirect = () => {
         return <Redirect to="/signup" />
     }
+    if (!isAuthenticated()) {
+        return (
+            <Base>
+                <div className="homeNotLoggedIn">
+                    <div className="message">
+                        Please login to your account
+                    </div>
+                </div>
+            </Base>
+        )
+    }
     return (
         <Base>
             <div className="homeBody">
                 <div className="controlPanel">
                     <div className="leftColumn">
-                        <div className="item1"><Link style={{ textDecoration: "none" }} to="/invoice/create">Create Invoice</Link></div>
-                        <div className="item1"><Link style={{ textDecoration: "none" }} to="/invoice/search">Search Invoice</Link></div>
-                        <div className="item1"><Link style={{ textDecoration: "none" }}>Search Customer</Link></div>
-                        <div className="item1"><Link style={{ textDecoration: "none" }}>Ladger</Link></div>
+
+                        <Link style={{ textDecoration: "none" }} to="/invoice/create">
+                            <div className="item1">
+                                Create Invoice
+                            </div>
+                        </Link>
+
+
+                        <Link style={{ textDecoration: "none" }} to="/invoice/search">
+                            <div className="item1">
+                                Search Invoice
+                            </div>
+                        </Link>
+
+
+                        <Link style={{ textDecoration: "none" }}>
+                            <div className="item1">
+                                Search Customer
+                            </div>
+                        </Link>
+
+                        <Link style={{ textDecoration: "none" }}>
+                            <div className="item1">
+                                Ladger
+                            </div>
+                        </Link>
                     </div>
+
 
                 </div>
 

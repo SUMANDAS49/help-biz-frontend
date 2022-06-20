@@ -29,6 +29,8 @@ function NavComponent() {
                         {!isAuthenticated() && <Nav.Link> <Link className="nav-link" to="/signin"> Signin</Link></Nav.Link>}
                         {isAuthenticated() && <Nav.Link> <span className="nav-link" onClick={() => { logoutHandler() }}> logout</span></Nav.Link>}
                         {redirect && redirectHelper()}
+                        <Nav.Link> <Link className="nav-link" to="/customer/invoice/search"> Find Your Invoices</Link></Nav.Link>
+
                     </Nav>
                 </Navbar.Collapse>
             </Container>

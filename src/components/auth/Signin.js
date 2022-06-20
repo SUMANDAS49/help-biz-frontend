@@ -24,6 +24,8 @@ function Signin() {
 
 
       }
+    }).catch((err) => {
+      console.log(err)
     })
   }
   const redirectToHome = () => {

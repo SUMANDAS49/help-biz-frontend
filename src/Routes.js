@@ -4,6 +4,7 @@ import Signin from './components/auth/Signin'
 import Signup from './components/auth/Signup'
 import Home from './components/core/Home'
 import InvoiceDisplayByLink from './components/invoice/core/InvoiceDisplayByLink'
+import FindInvoiceCustomer from './components/invoice/Customers/FindInvoiceCustomer'
 import InvoiceCreation from "./components/invoice/InvoiceCreation"
 import SearchInvoice from './components/invoice/SearchInvoice'
 function Routes() {
@@ -18,6 +19,7 @@ function Routes() {
                     <Route exact path="/invoice/create" component={InvoiceCreation} />
                     <Route exact path="/invoice/display/email/:id" component={InvoiceDisplayByLink} />
                     <Route exact path="/invoice/search" component={SearchInvoice} />
+                    <Route exact path="/customer/invoice/search" component={FindInvoiceCustomer} />
                 </Switch>
             </Router>
         </div>

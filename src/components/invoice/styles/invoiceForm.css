@@ -10,13 +10,25 @@
 }
 .customerDetailsFormBody input {
   margin: 7px;
-  border-radius: 2px;
+  border: none;
+  border-bottom: 1px solid black;
+}
+.customerDetailsFormBody input:focus {
+  outline: none;
+  font-weight: bold;
+  border-bottom: 2px solid black;
 }
 .addItemForm {
   margin-top: 40px;
-  background-color: rgb(224, 224, 224);
+  background-color: #35bdd0;
 }
 .addItemForm input {
   margin: 7px;
   border-radius: 2px;
+  border: none;
+}
+.addItemForm button {
+  background-color: greenyellow;
+  border: none;
+  width: 100px;
 }
