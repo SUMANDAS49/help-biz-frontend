@@ -7,18 +7,22 @@ import InvoiceDisplayByLink from './components/invoice/core/InvoiceDisplayByLink
 import FindInvoiceCustomer from './components/invoice/Customers/FindInvoiceCustomer'
 import InvoiceCreation from "./components/invoice/InvoiceCreation"
 import SearchInvoice from './components/invoice/SearchInvoice'
+import ShopProfile from './components/shop/ShopProfile'
+import PrivateRoute from './utils/PrivateRoute'
+import PublicRoute from './utils/PublicRoute'
 function Routes() {
 
     return (
         <div>
             <Router>
                 <Switch>
-                    <Route exact path="/signup" component={Signup} />
-                    <Route exact path="/signin" component={Signin} />
-                    <Route exact path="/" component={Home} />
-                    <Route exact path="/invoice/create" component={InvoiceCreation} />
-                    <Route exact path="/invoice/display/email/:id" component={InvoiceDisplayByLink} />
-                    <Route exact path="/invoice/search" component={SearchInvoice} />
+                    <PublicRoute exact path="/signup" component={Signup} />
+                    <PublicRoute exact path="/signin" component={Signin} />
+                    <PrivateRoute exact path="/" component={Home} />
+                    <PrivateRoute path="/user/account" component={ShopProfile} />
+                    <PrivateRoute exact path="/invoice/create" component={InvoiceCreation} />
+                    <PrivateRoute exact path="/invoice/display/email/:id" component={InvoiceDisplayByLink} />
+                    <PrivateRoute exact path="/invoice/search" component={SearchInvoice} />
                     <Route exact path="/customer/invoice/search" component={FindInvoiceCustomer} />
                 </Switch>
             </Router>
